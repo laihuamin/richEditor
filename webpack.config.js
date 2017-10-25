@@ -89,6 +89,12 @@ const webConfig = {
         use: [{
           loader: 'vue-loader'
         }]
+      },
+      {
+        test: /\.(css|less)$/,
+        use: [{
+          loader: 'less-loader'
+        }]
       }
     ]
   },
