@@ -34,4 +34,5 @@ Object.keys(webConfig.entry).forEach((item) => {
     webConfig.plugins.push(new htmlWebpackPlugin(conf));
 });
 
+
 module.exports = webConfig;

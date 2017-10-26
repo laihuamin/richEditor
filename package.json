@@ -6,11 +6,11 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "npm run clean && webpack --config ./bin/build/webpack.prod.js --color && npm run cp",
-        "cp": "cpr ./web/assets/vendor.js ./build/static/",
+        "cp": "cpr ./web/assets/vendor.js ./dist/static/",
         "clean": "rimraf ./build",
         "dev": "webpack --config ./bin/build/webpack.dev.js --watch",
         "serve": "webpack-dev-server --config ./bin/build/webpack.dev.js",
-        "weex": "webpack-dev-server --config ./bin/build/webpack.weex.dev.js --watch "
+        "weex": "webpack-dev-server --config ./bin/build/webpack.weex.js --watch "
     },
     "keywords": [
         "weex"
@@ -19,6 +19,7 @@
     "license": "MIT",
     "dependencies": {
         "chalk": "^2.3.0",
+        "cpr": "^2.2.0",
         "fs-extra": "^4.0.1",
         "glob": "^7.1.2",
         "less": "^3.0.0-alpha.3",

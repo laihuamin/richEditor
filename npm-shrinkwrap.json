@@ -1673,6 +1673,24 @@
             "integrity": "sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=",
             "dev": true
         },
+        "cpr": {
+            "version": "2.2.0",
+            "resolved": "https://registry.npmjs.org/cpr/-/cpr-2.2.0.tgz",
+            "integrity": "sha512-q8UoWzIT9rslJKb3Y5CcByzR2zX7GBkVcoU6jJx02d/BgbE7zJ8Aix74i7bw3iYk58TrgXhmB2XB0aGaBd7oZA==",
+            "requires": {
+                "graceful-fs": "4.1.11",
+                "minimist": "1.2.0",
+                "mkdirp": "0.5.1",
+                "rimraf": "2.6.1"
+            },
+            "dependencies": {
+                "minimist": {
+                    "version": "1.2.0",
+                    "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
+                    "integrity": "sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ="
+                }
+            }
+        },
         "create-ecdh": {
             "version": "4.0.0",
             "resolved": "http://registry.npm.taobao.org/create-ecdh/download/create-ecdh-4.0.0.tgz",
@@ -3712,7 +3730,7 @@
         },
         "has-ansi": {
             "version": "2.0.0",
-            "resolved": "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz",
+            "resolved": "http://registry.npm.taobao.org/has-ansi/download/has-ansi-2.0.0.tgz",
             "integrity": "sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=",
             "dev": true,
             "requires": {
@@ -6488,7 +6506,6 @@
             "version": "2.6.1",
             "resolved": "http://registry.npm.taobao.org/rimraf/download/rimraf-2.6.1.tgz",
             "integrity": "sha1-wjOOxkPfeht/5cVPqG9XQopV8z0=",
-            "dev": true,
             "requires": {
                 "glob": "7.1.2"
             }

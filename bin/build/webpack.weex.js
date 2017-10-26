@@ -17,4 +17,5 @@ const weexConfig = merge(config[1], {
     ]
 });
 
+console.log('server is running! Please open ' + chalk.green('http://' + ip + ':8080/index.js'));
 module.exports = weexConfig;
