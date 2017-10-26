@@ -4,11 +4,13 @@
     "description": "A weex project",
     "main": "index.js",
     "scripts": {
-        "start": "npm run serve",
-        "build": "webpack",
-        "build_plugin": "webpack --config ./tools/webpack.config.plugin.js --color",
-        "dev": "webpack --config webpack.config.js --watch",
-        "serve": "webpack-dev-server --config webpack.dev.js --progress --watch --open"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "npm run clean && webpack --config ./bin/build/webpack.prod.js --color && npm run cp",
+        "cp": "cpr ./web/assets/vendor.js ./build/static/",
+        "clean": "rimraf ./build",
+        "dev": "webpack --config ./bin/build/webpack.dev.js --watch",
+        "serve": "webpack-dev-server --config ./bin/build/webpack.dev.js",
+        "weex": "webpack-dev-server --config ./bin/build/webpack.weex.dev.js --watch "
     },
     "keywords": [
         "weex"
@@ -16,7 +18,9 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
+        "chalk": "^2.3.0",
         "fs-extra": "^4.0.1",
+        "glob": "^7.1.2",
         "less": "^3.0.0-alpha.3",
         "less-loader": "^4.0.5",
         "vue": "^2.1.8",

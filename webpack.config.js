@@ -29,12 +29,17 @@ var fileType = '';
 
 function walk(dir) {
   dir = dir || '.';
+  //如果有参数传入则用参数，如果没有参数传入则用.
   const directory = pathTo.join(__dirname, 'src', dir);
+  //将文件拼接起来，路径是当前文件夹开始的src/.，代表的意思就是src中的全部文件
   fs.readdirSync(directory)
+    //读取文件夹中的每一个模块
     .forEach((file) => {
       const fullpath = pathTo.join(directory, file);
+      //拼接文件的全部，名称
       const stat = fs.statSync(fullpath);
       const extname = pathTo.extname(fullpath);
+      //获取文件的扩展名
       if (stat.isFile() && extname === '.vue' || extname === '.we') {
         if (!fileType) {
           fileType = extname;
